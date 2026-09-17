@@ -1,0 +1,1407 @@
+/* =========================================================
+   PAUL-LU SAMUEL KAMARA PORTFOLIO
+   MAIN STYLE SHEET
+========================================================= */
+
+/* =========================================================
+   GOOGLE FONT
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #000;
+    color: #fff;
+}
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
+/*
+   Main Red: #b74b4b
+   Black:    #000000
+   Dark:     #111111
+   White:    #ffffff
+*/
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: rgba(17, 17, 17, 0.97);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    color: #fff;
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid transparent;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+
+/* =========================================================
+   SEARCH FORM
+========================================================= */
+
+.search-form {
+    display: flex;
+    align-items: center;
+    border: 2px solid #b74b4b;
+    border-radius: 3rem;
+    overflow: hidden;
+}
+
+.search-form input {
+    width: 18rem;
+    padding: 1rem 1.5rem;
+    background: transparent;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.search-form input::placeholder {
+    color: #ccc;
+}
+
+.search-form button {
+    background: #b74b4b;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.search-form button:hover {
+    background: #fff;
+    color: #b74b4b;
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10rem 9% 5rem;
+}
+
+
+/* =========================================================
+   HOME SECTION
+========================================================= */
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background: #000;
+}
+
+
+/* =========================================================
+   HOME IMAGE
+========================================================= */
+
+.home-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img img {
+    width: 33rem;
+    height: 33rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #b74b4b;
+    box-shadow: 0 0 30px #b74b4b;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.home-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 45px #b74b4b;
+}
+
+
+/* =========================================================
+   HOME CONTENT
+========================================================= */
+
+.home-content {
+    max-width: 65rem;
+}
+
+.home-content h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.home-content h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+.home-content h2 span {
+    color: #b74b4b;
+}
+
+.home-content h3 {
+    font-size: 2.8rem;
+    margin: 1rem 0;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    color: #ddd;
+    line-height: 1.8;
+    margin: 2rem 0;
+}
+
+
+/* =========================================================
+   TYPING TEXT
+========================================================= */
+
+.typing-text {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.typing-text span {
+    position: relative;
+    color: #b74b4b;
+}
+
+.typing-text span::before {
+    content: "Web Developer";
+    color: #b74b4b;
+    animation: words 15s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #b74b4b;
+    animation: cursor 0.8s infinite;
+}
+
+
+/* =========================================================
+   TYPING ANIMATIONS
+========================================================= */
+
+@keyframes cursor {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes words {
+
+    0%,
+    20% {
+        content: "Web Developer";
+    }
+
+    21%,
+    40% {
+        content: "IT Networking Specialist";
+    }
+
+    41%,
+    60% {
+        content: "PHP & MySQL Developer";
+    }
+
+    61%,
+    80% {
+        content: "Graphic Designer";
+    }
+
+    81%,
+    100% {
+        content: "Founder of Kamara Kreatives";
+    }
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: transparent;
+    color: #b74b4b;
+    border: 2px solid #b74b4b;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #b74b4b;
+    color: #000;
+    box-shadow: 0 0 25px #b74b4b;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.social-icons a {
+    width: 4.5rem;
+    height: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #b74b4b;
+    border-radius: 50%;
+    color: #b74b4b;
+    font-size: 2rem;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #b74b4b;
+    color: #000;
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 0 20px #b74b4b;
+}
+
+
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    background: #111;
+    padding-top: 12rem;
+    padding-bottom: 7rem;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   ABOUT IMAGE
+========================================================= */
+
+.about-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 35rem;
+    height: 35rem;
+    object-fit: cover;
+    border-radius: 2rem;
+    border: 4px solid #b74b4b;
+    box-shadow: 0 0 30px #b74b4b;
+    transition: 0.4s ease;
+}
+
+.about-img img:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   ABOUT CONTENT
+========================================================= */
+
+.about-content {
+    flex: 1;
+    min-width: 30rem;
+    max-width: 70rem;
+}
+
+.about-content h1 {
+    font-size: 4.5rem;
+    color: #b74b4b;
+    margin-bottom: 1rem;
+}
+
+.about-content h3 {
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 1.8rem;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-title h1 {
+    font-size: 4rem;
+    color: #b74b4b;
+}
+
+.section-title p {
+    font-size: 1.6rem;
+    color: #ccc;
+    margin-top: 1rem;
+}
+
+
+/* =========================================================
+   SKILLS SECTION
+========================================================= */
+
+.skills {
+    background: #000;
+    padding: 8rem 9%;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(25rem, 1fr)
+    );
+    gap: 2.5rem;
+}
+
+
+/* =========================================================
+   SKILL BOX
+========================================================= */
+
+.skill-box {
+    background: #171717;
+    padding: 3rem 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: 0.4s ease;
+}
+
+.skill-box:hover {
+    border-color: #b74b4b;
+    transform: translateY(-1rem);
+    box-shadow: 0 0 25px rgba(183, 75, 75, 0.5);
+}
+
+.skill-box i {
+    font-size: 4rem;
+    color: #b74b4b;
+    margin-bottom: 2rem;
+}
+
+.skill-box h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.skill-box p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+
+/* =========================================================
+   PRODUCTS / SERVICES
+========================================================= */
+
+.products {
+    width: 100%;
+    min-height: auto;
+    padding: 8rem 9%;
+    background: #111;
+}
+
+.products-content-one {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.products-content-one .text-1 {
+    font-size: 4rem;
+    color: #b74b4b;
+}
+
+
+/* =========================================================
+   CARD CONTAINER
+========================================================= */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(25rem, 1fr)
+    );
+    gap: 2.5rem;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card {
+    background: #1b1b1b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    border: 2px solid #333;
+    border-radius: 2rem;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    background: #b74b4b;
+    border-color: #b74b4b;
+    transform: translateY(-1rem);
+    box-shadow: 0 0 25px rgba(183, 75, 75, 0.5);
+}
+
+.card i {
+    font-size: 5rem;
+    color: #b74b4b;
+    margin-bottom: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.card h1 {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #ccc;
+}
+
+.card:hover i,
+.card:hover h1,
+.card:hover p {
+    color: #000;
+}
+
+
+/* =========================================================
+   READ MORE BUTTON
+========================================================= */
+
+.read-more {
+    display: inline-block;
+    width: 12rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    background: #b74b4b;
+    color: #fff;
+    border-radius: 3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.read-more:hover {
+    background: #fff;
+    color: #b74b4b;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    width: 100%;
+    background: #111;
+    padding: 5rem 9% 2rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(25rem, 1fr)
+    );
+    gap: 4rem;
+}
+
+.footer h2 {
+    font-size: 2.5rem;
+    color: #b74b4b;
+    margin-bottom: 1.5rem;
+}
+
+.footer h3 {
+    font-size: 1.8rem;
+    color: #b74b4b;
+    margin-bottom: 1.5rem;
+}
+
+.footer p,
+.footer a {
+    display: block;
+    color: #ccc;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 0.8rem;
+}
+
+.footer a {
+    transition: 0.3s ease;
+}
+
+.footer a:hover {
+    color: #b74b4b;
+    padding-left: 5px;
+}
+
+.footer hr {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 3rem 0 2rem;
+}
+
+.copyright {
+    text-align: center;
+    color: #888;
+    font-size: 1.4rem;
+}
+
+
+/* =========================================================
+   FOOTER SOCIALS
+========================================================= */
+
+.socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.socials a {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #222;
+    color: #fff;
+    font-size: 1.8rem;
+    transition: 0.3s ease;
+}
+
+.socials a:hover {
+    background: #b74b4b;
+    color: #000;
+    transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   HERO SECTION
+   FOR FUTURE PAGES
+========================================================= */
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12rem 9% 6rem;
+    background: #111;
+}
+
+.hero .content-one {
+    max-width: 60rem;
+}
+
+.hero .content-one .text-1 {
+    color: #fff;
+    font-size: 5rem;
+}
+
+.hero .content-one .text-2 {
+    color: #fff;
+    font-size: 3rem;
+}
+
+.hero .content-one .text-3 {
+    color: #b74b4b;
+    font-size: 1.8rem;
+}
+
+
+/* =========================================================
+   LEARN MORE
+========================================================= */
+
+.learn-more {
+    display: inline-block;
+    background: #b74b4b;
+    padding: 1rem 2rem;
+    color: #fff;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 3rem;
+    transition: 0.3s ease;
+}
+
+.learn-more:hover {
+    background: #fff;
+    color: #b74b4b;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    html {
+        font-size: 58%;
+    }
+
+    header {
+        padding: 2rem 5%;
+    }
+
+    section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .home {
+        gap: 5rem;
+    }
+
+    .home-img img {
+        width: 28rem;
+        height: 28rem;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .search-form {
+        width: 100%;
+        max-width: 32rem;
+    }
+
+    .search-form input {
+        width: 100%;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 4rem;
+        padding-top: 18rem;
+    }
+
+    .home-content {
+        max-width: 70rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 18rem;
+    }
+
+    .about-content {
+        max-width: 70rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 18rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1.5rem 4%;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        gap: 1.2rem;
+    }
+
+    nav ul li a {
+        font-size: 1.4rem;
+    }
+
+    .home {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .home-img img {
+        width: 24rem;
+        height: 24rem;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h2 {
+        font-size: 2.7rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.3rem;
+    }
+
+    .home-content p {
+        font-size: 1.5rem;
+    }
+
+    .typing-text {
+        font-size: 2.2rem;
+    }
+
+    .about-img img {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .about-content h1 {
+        font-size: 3.8rem;
+    }
+
+    .about-content h3 {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        font-size: 1.5rem;
+    }
+
+    .section-title h1 {
+        font-size: 3.5rem;
+    }
+
+    .products-content-one .text-1 {
+        font-size: 3.5rem;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    header {
+        padding: 1.2rem 3%;
+    }
+
+    .logo {
+        font-size: 2.2rem;
+    }
+
+    nav ul {
+        gap: 0.8rem;
+    }
+
+    nav ul li a {
+        font-size: 1.3rem;
+    }
+
+    .search-form {
+        max-width: 25rem;
+    }
+
+    .home-img img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .home-content h2 {
+        font-size: 2.3rem;
+    }
+
+    .home-content h3 {
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        font-size: 1.4rem;
+    }
+
+    .typing-text {
+        font-size: 1.8rem;
+    }
+
+    .social-icons a {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.7rem;
+    }
+
+    .about-img img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .about-content h1 {
+        font-size: 3.2rem;
+    }
+
+    .card {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .card h1 {
+        font-size: 2rem;
+    }
+
+    .footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
+/* =========================================================
+   CONTACT PAGE
+========================================================= */
+
+.contact-section {
+    min-height: 100vh;
+    background: #000;
+    padding: 14rem 9% 8rem;
+}
+
+
+/* =========================================================
+   CONTACT CONTAINER
+========================================================= */
+
+.contact-container {
+    max-width: 120rem;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+
+    gap: 5rem;
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION
+========================================================= */
+
+.contact-info {
+    background: #111;
+    padding: 4rem 3.5rem;
+
+    border-radius: 2rem;
+    border: 2px solid #222;
+
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+
+.contact-info h2 {
+    font-size: 3rem;
+    color: #b74b4b;
+    margin-bottom: 1.5rem;
+}
+
+
+.contact-intro {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 3rem;
+}
+
+
+/* =========================================================
+   CONTACT ITEMS
+========================================================= */
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 2rem;
+
+    margin-bottom: 2.5rem;
+}
+
+
+.contact-icon {
+    min-width: 5rem;
+    width: 5rem;
+    height: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #b74b4b;
+    color: #000;
+
+    border-radius: 50%;
+
+    font-size: 2rem;
+}
+
+
+.contact-item h3 {
+    font-size: 1.7rem;
+    color: #b74b4b;
+    margin-bottom: 0.5rem;
+}
+
+
+.contact-item p,
+.contact-item a {
+    font-size: 1.4rem;
+    color: #ccc;
+    line-height: 1.7;
+}
+
+
+.contact-item a:hover {
+    color: #b74b4b;
+}
+
+
+/* =========================================================
+   CONTACT SOCIALS
+========================================================= */
+
+.contact-socials {
+    margin-top: 3rem;
+}
+
+
+.contact-socials > h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+
+.contact-socials .social-icons {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   CONTACT FORM CONTAINER
+========================================================= */
+
+.contact-form-container {
+    background: #111;
+
+    padding: 4rem 3.5rem;
+
+    border-radius: 2rem;
+
+    border: 2px solid #222;
+
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+
+.contact-form-container h2 {
+    font-size: 3rem;
+    color: #b74b4b;
+    margin-bottom: 1rem;
+}
+
+
+.contact-form-container > p {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-bottom: 3rem;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.contact-form {
+    width: 100%;
+}
+
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    color: #fff;
+
+    margin-bottom: 0.8rem;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 1.3rem 1.5rem;
+
+    background: #1b1b1b;
+
+    color: #fff;
+
+    border: 2px solid #333;
+
+    border-radius: 1rem;
+
+    font-size: 1.4rem;
+
+    transition: 0.3s ease;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #b74b4b;
+
+    box-shadow: 0 0 12px rgba(183, 75, 75, 0.3);
+}
+
+
+.form-group select {
+    cursor: pointer;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 15rem;
+}
+
+
+/* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+.contact-btn {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-top: 1rem;
+}
+
+
+/* =========================================================
+   CONTACT PAGE TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact-section {
+        padding-top: 18rem;
+    }
+
+
+    .contact-container {
+        grid-template-columns: 1fr;
+
+        max-width: 70rem;
+    }
+
+}
+
+
+/* =========================================================
+   CONTACT PAGE MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .contact-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    .contact-info,
+    .contact-form-container {
+        padding: 3rem 2rem;
+    }
+
+
+    .contact-info h2,
+    .contact-form-container h2 {
+        font-size: 2.5rem;
+    }
+
+
+    .contact-item {
+        gap: 1.5rem;
+    }
+
+
+    .contact-icon {
+        min-width: 4.5rem;
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .contact-section {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+
+    .contact-info,
+    .contact-form-container {
+        padding: 2.5rem 1.5rem;
+    }
+
+
+    .contact-item {
+        gap: 1rem;
+    }
+
+
+    .contact-item p,
+    .contact-item a {
+        font-size: 1.3rem;
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 1.3rem;
+    }
+
+}
