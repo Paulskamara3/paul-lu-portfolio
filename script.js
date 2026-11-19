@@ -4,7 +4,7 @@
         .getElementById("contact-form")
         .addEventListener("submit", function(event) {
 
-            event.preventDefault();
+            event.preventDefault(); 
 
             const submitButton =
                 this.querySelector("button[type='submit']");
